@@ -9,4 +9,4 @@
 
 3. value stores the value and setValue is a function that can be used to change the value. The null passed to useState is used as the initial value for this state variable,so value here starts off equal to null.
 
-4. 
+4. By calling the set function from an onClick handler, we are telling React to re-render that Suare whenever its \<button> is clicked. After the update, the Square's value will be X .
