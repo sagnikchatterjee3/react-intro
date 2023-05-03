@@ -10,4 +10,10 @@
    3. This keeps the child component in sync with each other and with their parent.
 
 4. Lifitng state up is common when React component are refactored.
-5. s
+
+5. Each square will now recieve a value prop that will be either be 'X', '0' or null for empty squares. The App component now maintains which squares are filled. Since state is private to a component that defines it, we cannot directly update the Board's state from Square , instead we will pass down a function from the Board's component to the Square component, and well have Square call that function when a square is clicked. 
+
+6. handleClick(0) call will be part of the rendering the board component. Because handleClick(0) alters the state of the board component by calling setSqaures , our entire board component will be re-rendered again -> but this runs handleClick(0) again, leading to an inf loop.
+
+7. Don't wanna call handleClcik until the user clicks.
+8. 
